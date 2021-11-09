@@ -13,7 +13,7 @@ function onInputBlur(event) {
     
     if ( event.currentTarget.value.length === Number(event.currentTarget.dataset.length))  {
  
-       event.currentTarget.classList.add('valid')
+       classAdd('valid')
     }
     
     const hasClassInvalid = document.querySelector(".invalid")
@@ -21,9 +21,13 @@ function onInputBlur(event) {
     hasClassInvalid?.classList.remove("invalid")
     
     if(event.currentTarget.value.length !== Number(event.currentTarget.dataset.length)) {
-        event.currentTarget.classList.add('invalid')
+        classAdd("invalid")
     }
-    
-
+  
 }
 
+function classAdd(newclass) {
+    inputEl.classList.add(newclass)
+}
+
+ 
